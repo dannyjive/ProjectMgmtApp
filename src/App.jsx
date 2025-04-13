@@ -47,10 +47,10 @@ function App() {
         </div> */}
 
       {/* CREATE/ENTER TASK DETAILS */}
-        {/* <EnterTask /> */}
+        <EnterTask />
 
-        {/* PROJECT DETAIL PAGE*/}
-          <ProjDetail/>
+      {/* PROJECT DETAIL PAGE*/}
+        {/* <ProjDetail/> */}
       </main>
     </>
   );
