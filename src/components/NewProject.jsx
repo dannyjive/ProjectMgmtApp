@@ -2,7 +2,7 @@ import Input from "./Input";
 import Modal from "./Modal";
 import { useRef } from "react";
 
-const NewProject = ({ onAdd }) => {
+const NewProject = ({ onAdd, onCancel }) => {
 
   const modal = useRef()
 
@@ -17,7 +17,7 @@ const NewProject = ({ onAdd }) => {
 
     if (
       enteredTitle.trim() === "" ||
-      enteredDescription.trip() === "" ||
+      enteredDescription.trim() === "" ||
       enteredDueDate === ""
     ) {
       modal.current.open();
@@ -40,7 +40,7 @@ const NewProject = ({ onAdd }) => {
       <div className="w-[35rem] mt-16">
         <menu className="flex items-center justify-end gap-4 my-4">
           <li>
-            <button className="text-stone-800 hover:text-stone-960">
+            <button className="text-stone-800 hover:text-stone-960" onClick={onCancel}>
               Cancel
             </button>
           </li>
